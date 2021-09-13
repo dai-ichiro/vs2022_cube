@@ -6,13 +6,13 @@ namespace cube
     {
         public static bool finished = false;
 
-        public static int[,] cp_move_table;
-        public static int[,] co_move_table;
-        public static int[,] eo_move_table;
+        public static int[][] cp_move_table;
+        public static int[][] co_move_table;
+        public static int[][] eo_move_table;
 
-        public static int[,] cp_co_prune_table;
-        public static int[,] cp_eo_prune_table;
-        public static int[,] co_eo_prune_table;
+        public static int[][] cp_co_prune_table;
+        public static int[][] cp_eo_prune_table;
+        public static int[][] co_eo_prune_table;
 
         public static string[] move_names = { "U", "U2", "U'", "D", "D2", "D'", "L", "L2", "L'", "R", "R2", "R'", "F", "F2", "F'", "B", "B2", "B'" };
 

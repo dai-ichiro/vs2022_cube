@@ -1,7 +1,5 @@
 ﻿using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Collections.Generic;
-
+using System.Text;
 
 namespace cube
 {
@@ -9,22 +7,16 @@ namespace cube
 
     public class File_Operation
     {
-        public static int[,] read_array(string path)
+        public static string read_json(string path)
         {
-            using (FileStream fs = new FileStream(path, FileMode.Open))
-            {
-                BinaryFormatter bf = new BinaryFormatter();
-                return (int[,])bf.Deserialize(fs);
-            }
-        }
+            string jsonStr;
 
-        public static Dictionary<int, int> read_dict(string path)
-        {
-            using (FileStream fs = new FileStream(path, FileMode.Open))
+            using (var reader = new StreamReader(path, Encoding.UTF8))
             {
-                BinaryFormatter bf = new BinaryFormatter();
-                return (Dictionary<int, int>)bf.Deserialize(fs);
+                jsonStr = reader.ReadToEnd();
             }
+
+            return jsonStr;
         }
 
     }

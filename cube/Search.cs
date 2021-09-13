@@ -50,9 +50,9 @@ namespace cube
 
         private bool prune(int depth, Mini_State m_state)
         {
-            if (depth < Global.cp_co_prune_table[m_state.cp, m_state.co]) return true;
-            if (depth < Global.cp_eo_prune_table[m_state.cp, m_state.eo]) return true;
-            if (depth < Global.co_eo_prune_table[m_state.co, m_state.eo]) return true;
+            if (depth < Global.cp_co_prune_table[m_state.cp][m_state.co]) return true;
+            if (depth < Global.cp_eo_prune_table[m_state.cp][m_state.eo]) return true;
+            if (depth < Global.co_eo_prune_table[m_state.co][m_state.eo]) return true;
             return false;
         }
         private int ep_to_index(int[] ep)
