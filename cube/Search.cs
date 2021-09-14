@@ -121,7 +121,7 @@ namespace cube
                 if (back_count > 0)
                 {
                     back_count -= 1;
-                    break;
+                    return false;
                 }
             }
             return false;
