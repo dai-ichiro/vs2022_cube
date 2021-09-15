@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Diagnostics;
-using System.Text.Json;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace cube
@@ -10,26 +9,14 @@ namespace cube
 
     class Program
     {
+        static string scramble;
         static void Main(string[] args)
         {
             Console.WriteLine("Loading pretrained data...");
 
-            Global.cp_move_table = JsonSerializer.Deserialize<int[][]>(File_Operation.read_json("./data/cp_move_table.json"));
-            Global.co_move_table = JsonSerializer.Deserialize<int[][]>(File_Operation.read_json("./data/co_move_table.json"));
-            Global.eo_move_table = JsonSerializer.Deserialize<int[][]>(File_Operation.read_json("./data/eo_move_table.json"));
-
-            Global.cp_co_prune_table = JsonSerializer.Deserialize<int[][]>(File_Operation.read_json("./data/cp_co_prune_table.json"));
-            Global.cp_eo_prune_table = JsonSerializer.Deserialize<int[][]>(File_Operation.read_json("./data/cp_eo_prune_table.json"));
-            Global.co_eo_prune_table = JsonSerializer.Deserialize<int[][]>(File_Operation.read_json("./data/co_eo_prune_table.json"));
-
-            Global.ep_dict = JsonSerializer.Deserialize<Dictionary<int, int>>(File_Operation.read_json("./data/ep_dict.json"));
-
-            int[] new_ep = new int[12];
-
-            string scramble;
             //scramble = "R' U' F R' B' F2 L2 D' U' L2 F2 D' L2 D' R B D2 L D2 F2 U2 L R' U' F";
-            //scramble = "R' U' F R' B' F2 L2 D' U' L2 F2 D' L2 D' R B";
-            scramble = "R' U' F R' B' F2 L2 D' U' L2 F2 D' L2 D' R";
+            scramble = "R' U' F R' B' F2 L2 D' U' L2 F2 D' L2 D' R B";
+            //scramble = "R' U' F R' B' F2 L2 D' U' L2 F2 D' L2 D' R";
             //scramble = "R' U' F R' B' F2 L2 D' U' L2 F2 D' L2";
             //scramble = "R' U' F R' B' F2 L2 D' U' L2 F2 D'";
             //scramble = "R' U' F R' B' F2 L2 D' U'";

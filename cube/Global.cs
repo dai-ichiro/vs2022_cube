@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text.Json;
 
 namespace cube
 {
@@ -6,17 +7,17 @@ namespace cube
     {
         public static bool finished = false;
 
-        public static int[][] cp_move_table;
-        public static int[][] co_move_table;
-        public static int[][] eo_move_table;
+        public static readonly int[][] cp_move_table = JsonSerializer.Deserialize<int[][]>(File_Operation.read_json("./data/cp_move_table.json"));
+        public static readonly int[][] co_move_table = JsonSerializer.Deserialize<int[][]>(File_Operation.read_json("./data/co_move_table.json"));
+        public static readonly int[][] eo_move_table = JsonSerializer.Deserialize<int[][]>(File_Operation.read_json("./data/eo_move_table.json"));
 
-        public static int[][] cp_co_prune_table;
-        public static int[][] cp_eo_prune_table;
-        public static int[][] co_eo_prune_table;
+        public static readonly int[][] cp_co_prune_table = JsonSerializer.Deserialize<int[][]>(File_Operation.read_json("./data/cp_co_prune_table.json"));
+        public static readonly int[][] cp_eo_prune_table = JsonSerializer.Deserialize<int[][]>(File_Operation.read_json("./data/cp_eo_prune_table.json"));
+        public static readonly int[][] co_eo_prune_table = JsonSerializer.Deserialize<int[][]>(File_Operation.read_json("./data/co_eo_prune_table.json"));
 
-        public static string[] move_names = { "U", "U2", "U'", "D", "D2", "D'", "L", "L2", "L'", "R", "R2", "R'", "F", "F2", "F'", "B", "B2", "B'" };
+        public static readonly string[] move_names = { "U", "U2", "U'", "D", "D2", "D'", "L", "L2", "L'", "R", "R2", "R'", "F", "F2", "F'", "B", "B2", "B'" };
 
-        public static Dictionary<int, int[]> ep_move_dict = new Dictionary<int, int[]>()
+        public static readonly Dictionary<int, int[]> ep_move_dict = new Dictionary<int, int[]>()
         {
             {0,  new int[]{ 0, 1, 2, 3, 7, 4, 5, 6, 8, 9, 10, 11 } },
             {1,  new int[]{ 0, 1, 2, 3, 6, 7, 4, 5, 8, 9, 10, 11 } },
@@ -37,6 +38,6 @@ namespace cube
             {16, new int[]{ 1, 0, 2, 3, 8, 5, 6, 7, 4, 9, 10, 11 } },
             {17, new int[]{ 8, 4, 2, 3, 0, 5, 6, 7, 1, 9, 10, 11 } }
         };
-        public static Dictionary<int, int> ep_dict;
+        public static readonly Dictionary<int, int> ep_dict = JsonSerializer.Deserialize<Dictionary<int, int>>(File_Operation.read_json("./data/ep_dict.json"));
     }
 }
