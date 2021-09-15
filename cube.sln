@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pretrain_ep", "pretrain_ep\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "make_cp_move_table", "make_cp_move_table\make_cp_move_table.csproj", "{AA108794-A3CF-439C-8D45-401898EC0B4F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "make_co_move_table", "..\make_co_move_table\make_co_move_table\make_co_move_table.csproj", "{78D18796-76D1-419A-B198-2C07CAE17901}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "make_co_move_table", "make_co_move_table\make_co_move_table.csproj", "{4E71AF10-548C-4827-BD2E-538DD231C331}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{AA108794-A3CF-439C-8D45-401898EC0B4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA108794-A3CF-439C-8D45-401898EC0B4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA108794-A3CF-439C-8D45-401898EC0B4F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{78D18796-76D1-419A-B198-2C07CAE17901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{78D18796-76D1-419A-B198-2C07CAE17901}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{78D18796-76D1-419A-B198-2C07CAE17901}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{78D18796-76D1-419A-B198-2C07CAE17901}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E71AF10-548C-4827-BD2E-538DD231C331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E71AF10-548C-4827-BD2E-538DD231C331}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E71AF10-548C-4827-BD2E-538DD231C331}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E71AF10-548C-4827-BD2E-538DD231C331}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
