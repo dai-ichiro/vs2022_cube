@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "make_eo_move_table", "make_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "make_cp_co_prune_table", "make_cp_co_prune_table\make_cp_co_prune_table.csproj", "{FE1A39D8-0380-4F9C-9462-3E3AC7FF8E4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "make_cp_eo_prune_table", "make_cp_eo_prune_table\make_cp_eo_prune_table.csproj", "{F986A056-BECA-4B40-901C-0D737AA21CD7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{FE1A39D8-0380-4F9C-9462-3E3AC7FF8E4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE1A39D8-0380-4F9C-9462-3E3AC7FF8E4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE1A39D8-0380-4F9C-9462-3E3AC7FF8E4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F986A056-BECA-4B40-901C-0D737AA21CD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F986A056-BECA-4B40-901C-0D737AA21CD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F986A056-BECA-4B40-901C-0D737AA21CD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F986A056-BECA-4B40-901C-0D737AA21CD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
