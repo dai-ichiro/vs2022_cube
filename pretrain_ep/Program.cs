@@ -95,7 +95,6 @@ class Program
         }
 
         List<int> current_solution = new List<int> { };
-        string[] last_5_solution = new string[] { };
 
         List<int> result = new List<int>();
 
@@ -136,23 +135,27 @@ class Program
         Console.WriteLine("Start searching...");
 
 
-        int depth = 6;
+        for (int depth = 6; depth < 13; depth++)
+        {
+            Console.WriteLine("Start searching lenght {0}", depth);
 
-        Console.WriteLine("Start searching lenght {0}", depth);
-        depth_limited_search(scrambled_mini_state, depth);
+            current_solution.Clear();
+            result.Clear();
 
+            depth_limited_search(scrambled_mini_state, depth);
 
-        HashSet<int> final_result = new HashSet<int>(result);
+            HashSet<int> final_result = new HashSet<int>(result);
 
-        Console.WriteLine($"list_count: {result.Count}");
-        Console.WriteLine($"hash_count: {final_result.Count}");
+            Console.WriteLine($"list_count: {result.Count}");
+            Console.WriteLine($"hash_count: {final_result.Count}");
 
-        string new_jsonStr = JsonSerializer.Serialize(final_result);
-        string file_name = $"ep_index_{depth}.json";
+            string new_jsonStr = JsonSerializer.Serialize(final_result);
+            string file_name = $"ep_index_{depth}.json";
 
-        StreamWriter writer = new StreamWriter(file_name, false, Encoding.GetEncoding("utf-8"));
-        writer.WriteLine(new_jsonStr);
-        writer.Close();
+            StreamWriter writer = new StreamWriter(file_name, false, Encoding.UTF8);
+            writer.WriteLine(new_jsonStr);
+            writer.Close();
+        }
 
         sw.Stop();
         TimeSpan ts = sw.Elapsed;

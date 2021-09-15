@@ -1,4 +1,6 @@
-﻿namespace pretrain_ep;
+﻿using System.Linq;
+
+namespace pretrain_ep;
 class State
 {
     public int cp;
