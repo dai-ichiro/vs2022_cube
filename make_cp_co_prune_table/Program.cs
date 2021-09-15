@@ -3,14 +3,14 @@ using System.Text.Json;
 
 string jsonStr;
 
-using (var sr = new StreamReader("./data/cp_move_table.json", Encoding.GetEncoding("utf-8")))
+using (var sr = new StreamReader("./data/cp_move_table.json", Encoding.UTF8))
 {
     jsonStr = sr.ReadToEnd();
 }
 
 var cp_move_table = JsonSerializer.Deserialize<int[][]>(jsonStr);
 
-using (var sr = new StreamReader("./data/co_move_table.json", Encoding.GetEncoding("utf-8")))
+using (var sr = new StreamReader("./data/co_move_table.json", Encoding.UTF8))
 {
     jsonStr = sr.ReadToEnd();
 }
