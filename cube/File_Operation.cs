@@ -1,21 +1,19 @@
 ﻿using System.IO;
 using System.Text;
 
-namespace cube
+namespace cube;
+public class File_Operation
 {
-    public class File_Operation
+    public static string read_json(string path)
     {
-        public static string read_json(string path)
+        string jsonStr;
+
+        using (var reader = new StreamReader(path, Encoding.UTF8))
         {
-            string jsonStr;
-
-            using (var reader = new StreamReader(path, Encoding.UTF8))
-            {
-                jsonStr = reader.ReadToEnd();
-            }
-
-            return jsonStr;
+            jsonStr = reader.ReadToEnd();
         }
 
+        return jsonStr;
     }
+
 }
