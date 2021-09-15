@@ -1,4 +1,7 @@
-﻿string[] move_names = { "U", "U2", "U'", "D", "D2", "D'", "L", "L2", "L'", "R", "R2", "R'", "F", "F2", "F'", "B", "B2", "B'" };
+﻿using System.Text;
+using System.Text.Json;
+
+string[] move_names = { "U", "U2", "U'", "D", "D2", "D'", "L", "L2", "L'", "R", "R2", "R'", "F", "F2", "F'", "B", "B2", "B'" };
 
 var move_dict = new Dictionary<int, int[]>()
 {
