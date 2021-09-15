@@ -73,7 +73,7 @@ foreach (int i in Enumerable.Range(0, 40320))
 
 string jsonStr = JsonSerializer.Serialize(cp_move_table);
 
-using (var writer = new StreamWriter("cp_move_table.json", false, Encoding.GetEncoding("utf-8")))
+using (var writer = new StreamWriter("cp_move_table.json", false, Encoding.UTF8))
 {
     writer.Write(jsonStr);
 }
