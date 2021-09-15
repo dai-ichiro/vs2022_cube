@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "make_co_move_table", "make_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "make_eo_move_table", "make_eo_move_table\make_eo_move_table.csproj", "{08FFF911-D266-4456-8FA0-160BA84CB6DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "make_cp_co_prune_table", "make_cp_co_prune_table\make_cp_co_prune_table.csproj", "{FE1A39D8-0380-4F9C-9462-3E3AC7FF8E4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{08FFF911-D266-4456-8FA0-160BA84CB6DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08FFF911-D266-4456-8FA0-160BA84CB6DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08FFF911-D266-4456-8FA0-160BA84CB6DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE1A39D8-0380-4F9C-9462-3E3AC7FF8E4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE1A39D8-0380-4F9C-9462-3E3AC7FF8E4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE1A39D8-0380-4F9C-9462-3E3AC7FF8E4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE1A39D8-0380-4F9C-9462-3E3AC7FF8E4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
