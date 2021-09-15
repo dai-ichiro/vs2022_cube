@@ -30,7 +30,7 @@ namespace cube
         private int calc_back_count(int index)
         {
             Global.ep_dict.TryGetValue(index, out dict_index);
-            return dict_index == 0 ? 6 : dict_index;
+            return dict_index == 0 ? 7 : dict_index;
         }
 
         private bool is_move_available(int pre, int now)
