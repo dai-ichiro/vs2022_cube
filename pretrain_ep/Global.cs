@@ -1,4 +1,6 @@
-﻿namespace pretrain_ep;
+﻿using System.Collections.Generic;
+
+namespace pretrain_ep;
 
 public class Global
 {

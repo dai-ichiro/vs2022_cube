@@ -1,6 +1,10 @@
 ﻿using System.Text;
 using System.Text.Json;
 using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Collections.Generic;
+using System;
 
 namespace pretrain_ep;
 
@@ -17,22 +21,22 @@ class Program
         }
         string jsonStr;
 
-        jsonStr = ReadAllLine("cp_move_table.json");
+        jsonStr = ReadAllLine("./data/cp_move_table.json");
         Global.cp_move_table = JsonSerializer.Deserialize<int[][]>(jsonStr);
 
-        jsonStr = ReadAllLine("co_move_table.json");
+        jsonStr = ReadAllLine("./data/co_move_table.json");
         Global.co_move_table = JsonSerializer.Deserialize<int[][]>(jsonStr);
 
-        jsonStr = ReadAllLine("eo_move_table.json");
+        jsonStr = ReadAllLine("./data/eo_move_table.json");
         Global.eo_move_table = JsonSerializer.Deserialize<int[][]>(jsonStr);
 
-        jsonStr = ReadAllLine("cp_co_prune_table.json");
+        jsonStr = ReadAllLine("./data/cp_co_prune_table.json");
         Global.cp_co_prune_table = JsonSerializer.Deserialize<int[][]>(jsonStr);
 
-        jsonStr = ReadAllLine("cp_eo_prune_table.json");
+        jsonStr = ReadAllLine("./data/cp_eo_prune_table.json");
         Global.cp_eo_prune_table = JsonSerializer.Deserialize<int[][]>(jsonStr);
 
-        jsonStr = ReadAllLine("co_eo_prune_table.json");
+        jsonStr = ReadAllLine("./data/co_eo_prune_table.json");
         Global.co_eo_prune_table = JsonSerializer.Deserialize<int[][]>(jsonStr);
 
         int[] new_ep = new int[12];
@@ -132,7 +136,7 @@ class Program
         Console.WriteLine("Start searching...");
 
 
-        int depth = 12;
+        int depth = 6;
 
         Console.WriteLine("Start searching lenght {0}", depth);
         depth_limited_search(scrambled_mini_state, depth);
