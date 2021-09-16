@@ -103,7 +103,7 @@ class Search
             return false;
         }
 
-        if (prune(depth, m_state))
+        if (depth < 12 && prune(depth, m_state))
         {
             return false;
         }
