@@ -39,4 +39,23 @@ public class Global
             {17, new int[]{ 8, 4, 2, 3, 0, 5, 6, 7, 1, 9, 10, 11 } }
         };
     public static readonly Dictionary<int, int> ep_dict = JsonSerializer.Deserialize<Dictionary<int, int>>(File_Operation.read_json("./data/ep_dict.json"));
+
+    public static readonly HashSet<(int, int, int, int)> not_available_four_moves = new HashSet<(int, int, int, int)>()
+    {
+        (1, 7, 10, 4),
+        (1, 7, 10, 1),
+        (1, 16, 13, 4),
+        (1, 16, 13, 1),
+        (4, 1, 7, 10),
+        (7, 4, 1, 10),
+        (7, 4, 1, 7),
+        (7, 16, 13, 10),
+        (7, 16, 13, 7),
+        (13, 4, 1, 16),
+        (13, 4, 1, 13),
+        (13, 7, 10, 16),
+        (13, 7, 10, 13),
+        (4, 1, 16, 13),
+        (7, 10, 16, 13),
+    };
 }
