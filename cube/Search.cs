@@ -29,8 +29,7 @@ class Search
 
     private int calc_back_count(int index)
     {
-        Global.ep_dict.TryGetValue(index, out dict_index);
-        return dict_index == 0 ? 6 : dict_index;
+        return Global.ep_dict.TryGetValue(index, out dict_index) ? dict_index : 6;
     }
 
     private bool is_move_available(int pre, int now)
