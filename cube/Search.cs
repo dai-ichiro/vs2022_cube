@@ -109,7 +109,7 @@ class Search
             return false;
         }
 
-        int prev_move = current_solution.Count == 0 ? -1 : current_solution.Last();
+        int prev_move = current_solution.Last();
         for (int move_num = 0; move_num < 18; move_num++)
         {
             if (!(is_move_available(prev_move, move_num))) continue;
