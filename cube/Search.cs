@@ -9,6 +9,7 @@ class Search
     int now_ep_index;
     int back_count;
     int dict_index;
+    int solution_count;
 
     Mini_State scrambled_mini_state;
     int[] initial_ep;
@@ -113,6 +114,21 @@ class Search
         for (int move_num = 0; move_num < 18; move_num++)
         {
             if (!(is_move_available(prev_move, move_num))) continue;
+            if(prev_move % 3 == 1 && move_num % 3 ==1){
+                solution_count = current_solution.Count;
+                if(solution_count > 2)
+                {
+                    if (Global.not_available_four_moves.Contains((
+                    current_solution[solution_count - 3],
+                    current_solution[solution_count - 2],
+                    prev_move,
+                    move_num
+                    )))
+                    {
+                        continue;
+                    }
+                }
+            }
             current_solution.Add(move_num);
             if (depth_limited_search(m_state.apply_move(move_num), depth - 1)) return true;
             current_solution.RemoveAt(current_solution.Count - 1);
