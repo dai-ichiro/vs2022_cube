@@ -12,8 +12,8 @@ class Program
     {
         Console.WriteLine("Loading pretrained data...");
 
-        //scramble = "R' U' F R' B' F2 L2 D' U' L2 F2 D' L2 D' R B D2 L D2 F2 U2 L R' U' F";
-        scramble = "R' U' F R' B' F2 L2 D' U' L2 F2 D' L2 D' R B";
+        scramble = "R' U' F R' B' F2 L2 D' U' L2 F2 D' L2 D' R B D2 L D2 F2 U2 L R' U' F";
+        //scramble = "R' U' F R' B' F2 L2 D' U' L2 F2 D' L2 D' R B";
         //scramble = "R' U' F R' B' F2 L2 D' U' L2 F2 D' L2 D' R";
         //scramble = "R' U' F R' B' F2 L2 D' U' L2 F2 D' L2";
         //scramble = "R' U' F R' B' F2 L2 D' U'";
